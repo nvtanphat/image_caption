@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-from tensorflow.keras.preprocessing.sequence import pad_sequences
+from keras_preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import matplotlib.pyplot as plt
@@ -47,6 +47,9 @@ def generate_and_display_caption(image_path, model_path, tokenizer_path, feature
     plt.axis('off')
     plt.title(caption, fontsize=16, color='blue')
     st.pyplot(plt)   # render lên giao diện Streamlit
+    st.pyplot(plt.gcf())
+    plt.clf()
+
 
 # Giao diện Streamlit
 def main():
