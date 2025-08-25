@@ -1,7 +1,6 @@
-streamlit
 tensorflow==2.20.0
-keras
-keras_preprocessing
+keras==2.20.0
+streamlit
 numpy
 matplotlib
 pillow
